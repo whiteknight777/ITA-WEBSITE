@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: 'C:\wamp64\www\ITA\app/config/routing_dev.yml'
+    resource: 'C:\wamp64\www\ITA-WEBSITE\app/config/routing_dev.yml'

@@ -20,7 +20,7 @@ class DefaultController extends Controller
         $utilisateur = $this->getUser();
 
         if ($utilisateur == null) {
-            return $this->redirect($this->generateUrl('user_interface'));
+            return $this->redirect($this->generateUrl('accueil'));
         }
         if (in_array("ROLE_ADMIN", $utilisateur->getRoles())) {
             $this->addFlash(
@@ -30,7 +30,7 @@ class DefaultController extends Controller
             return $this->redirect($this->generateUrl('admin_interface'));
         }
 
-        return $this->redirect($this->generateUrl('user_interface'));
+        return $this->redirect($this->generateUrl('accueil'));
 
     }
 

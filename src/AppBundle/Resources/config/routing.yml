@@ -2,8 +2,8 @@ welcome:
   path: /
   defaults: { _controller: AppBundle:Default:welcome }
 
-user_interface:
-  path: /user
+accueil:
+  path: /accueil
   defaults: { _controller: AppBundle:Default:index }
 
 admin_interface:

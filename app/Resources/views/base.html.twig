@@ -4,22 +4,50 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1.0">
-    <title>{% block title %}App Symfony 3{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
     <meta name="description" content="{% block description %}{% endblock %}">
-    <meta name="keywords" content="{% block keywords %}{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}construction{% endblock %}">
     
     {% block stylesheets %}
-        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <!-- CSS Files
+        ================================================== -->
+        <link rel="stylesheet" href="{{ asset('bundles/css/bootstrap.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('bundles/css/animate.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('bundles/css/owl.carousel.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('bundles/css/magnific-popup.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('bundles/css/style.css') }}" type="text/css">
+
+        <!-- custom background -->
+        <link rel="stylesheet" href="{{ asset('bundles/css/bg.css') }}" type="text/css">
+
+        <!-- color scheme -->
+        <link rel="stylesheet" href="{{ asset('bundles/css/color.css') }}" type="text/css" id="colors">
     {% endblock %}
 
 </head>
 
-<body>
+<body id="homepage">
 
     {% block body %}{% endblock %}
 
+    {% include 'default/modules/footer.html.twig' %}
+
     {% block javascripts %}
         <script type="javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+            <!-- Javascript Files
+        ================================================== -->
+        <script src="{{ asset('bundles/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('bundles/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('bundles/js/jquery.isotope.min.js') }}"></script>
+        <script src="{{ asset('bundles/js/easing.js') }}"></script>
+        <script src="{{ asset('bundles/js/owl.carousel.js') }}"></script>
+        <script src="{{ asset('bundles/js/jquery.countTo.js') }}"></script>
+        <script src="{{ asset('bundles/js/validation.js') }}"></script>
+        <script src="{{ asset('bundles/js/wow.min.js') }}"></script>
+        <script src="{{ asset('bundles/js/jquery.magnific-popup.min.js') }}"></script>
+        <script src="{{ asset('bundles/js/enquire.min.js') }}"></script>
+        <script src="{{ asset('bundles/js/jquery.stellar.min.js') }}"></script>
+        <script src="{{ asset('bundles/js/designesia.js') }}"></script>
     {% endblock %}
 
 </body>
