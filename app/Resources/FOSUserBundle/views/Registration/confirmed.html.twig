@@ -1,0 +1,51 @@
+
+
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+    <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+    {% if targetUrl %}
+    <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+    {% endif %}
+
+{% endblock fos_user_content %}
+
+
+
+
+
+
+{% extends '::base-authentification.html.twig' %}
+
+
+{% block body %}
+    <div class="account-pages"></div>
+    <div class="clearfix"></div>
+    <div class="container">
+        <div class="text-center">
+            <img src="{{ asset('apple-touch-icon.png') }}"/>
+            <h1 style="margin-top:30px;"><span> Création d'un utilisateur</span></h1>
+        </div>
+        <div class="m-t-40 card-box">
+            <div class="text-center">
+                <h4 class="text-uppercase font-bold m-b-0">Bienvenue</h4>
+            </div>
+            {% trans_default_domain 'FOSUserBundle' %}
+            <div class="panel-body text-center">
+                {# <img src="{{ asset('bundles/dynamixlearning/images/mail_confirm.png') }}" alt="img" class="thumb-lg m-t-20 center-block" /> #}
+                <p class="text-muted font-13 m-t-20"> {{ 'registration.confirmed'|trans({'%username%': user.username}) }}. </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <p class="text-muted">Return to <a href="{{ path('fos_user_security_login') }}" class="text-primary m-l-5"><b>Sign in</b></a></p>
+                <p class="text-muted">Get your profil <a href="{{ path('fos_user_profile_show') }}" class="text-primary m-l-5"><b>Get profile</b></a></p>
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% block title %}{% endblock %}
+{% block description %}{% endblock %}
+{% block keywords %}{% endblock %}
+
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>BIENVENUE DANS SYMFONY 3</h1>
+        <span>Vous n'êtes pas connecté ! <a href="{{ path('fos_user_security_login') }}">cliquez-ici</a> pour vous connecter </span>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}

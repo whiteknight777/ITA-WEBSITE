@@ -1,0 +1,13 @@
+{% trans_default_domain 'FOSUserBundle' %}
+{% for titre, messages in app.session.flashBag.all() %}
+    {% for message in messages %}
+    <div class="alert alert-{{titre}}">{{message}}</div>
+    {% endfor %}
+{% endfor %}
+<div class="fos_user_user_show">
+    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+    <p class="text-muted">Update your profil <a href="{{ path('fos_user_profile_edit') }}" class="text-primary m-l-5">Edit profile</a></p>
+    <p class="text-muted">Update your pass <a href="{{ path('fos_user_change_password') }}" class="text-primary m-l-5">Edit password</a></p>
+    <p class="text-muted">Déconnexion <a href="{{ path('fos_user_security_logout') }}" class="text-primary m-l-5">Deconnexion</a></p>
+</div>
