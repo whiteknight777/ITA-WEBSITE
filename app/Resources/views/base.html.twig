@@ -19,11 +19,19 @@
 
         <!-- custom background -->
         <link rel="stylesheet" href="{{ asset('bundles/css/bg.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('bundles/css/base.css') }}" type="text/css">
 
         <!-- color scheme -->
         <link rel="stylesheet" href="{{ asset('bundles/css/color.css') }}" type="text/css" id="colors">
-    {% endblock %}
+            
+        <!-- RS5.0 Main Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/revolution/css/settings.css') }}">
 
+        <!-- RS5.0 Layers and Navigation Styles -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/revolution/css/layers.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/revolution/css/navigation.css') }}">
+    {% endblock %}
+    
 </head>
 
 <body id="homepage">
@@ -48,6 +56,43 @@
         <script src="{{ asset('bundles/js/enquire.min.js') }}"></script>
         <script src="{{ asset('bundles/js/jquery.stellar.min.js') }}"></script>
         <script src="{{ asset('bundles/js/designesia.js') }}"></script>
+
+        <!-- RS5.0 Core JS Files -->
+        <script type="text/javascript" src="{{ asset('bundles/revolution/js/jquery.themepunch.tools.min.js?rev=5.0') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0') }}"></script>
+
+        <!-- RS5.0 Extensions Files -->
+        <script type="text/javascript" src="{{ asset('bundles/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/revolution/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/revolution/js/extensions/revolution.extension.actions.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/revolution/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/revolution/js/extensions/revolution.extension.migration.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+
+        <script>
+            jQuery(document).ready(function () {
+                jQuery("#revolution-slider").revolution({
+                    sliderType: "standard",
+                    sliderLayout: "fullwidth",
+                    delay: 3500,
+                    navigation: {
+                        arrows: { enable: true }
+                    },
+                    parallax: {
+                        type: "mouse",
+                        origo: "slidercenter",
+                        speed: 2000,
+                        levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
+                    },
+                    spinner: "off",
+                    gridwidth: 1140,
+                    gridheight: 600,
+                    disableProgressBar: "on"
+                });
+            });
+        </script>
     {% endblock %}
 
 </body>

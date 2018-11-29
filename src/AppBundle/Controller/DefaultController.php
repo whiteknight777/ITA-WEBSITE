@@ -5,11 +5,12 @@ namespace AppBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use UserBundle\Entity\User;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class DefaultController extends Controller
 {
     /**
-     * 
+     * @Route("/", name="welcome")
      */
     public function welcomeAction(Request $request)
     {
@@ -35,16 +36,62 @@ class DefaultController extends Controller
     }
 
     /**
-     * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/accueil", name="accueil")
      */
-    public function indexAction(Request $request)
+    public function accueilAction(Request $request)
     {
         $utilisateur = $this->getUser();
+        $page = 1;
         $em = $this->getDoctrine()->getManager();
         // replace this example code with whatever you need
         return $this->render('default\index.html.twig', array(
-            'user' => $utilisateur
+            'user' => $utilisateur,
+            'page' => $page
+        ));
+    }
+
+    /**
+     * @Route("/a-propos", name="apropos")
+     */
+    public function aProposAction(Request $request)
+    {
+        $utilisateur = $this->getUser();
+        $page = 2;
+        $em = $this->getDoctrine()->getManager();
+        // replace this example code with whatever you need
+        return $this->render('default\apropos.html.twig', array(
+            'user' => $utilisateur,
+            'page' => $page
+        ));
+    }
+
+    /**
+     * @Route("/notre-histoire", name="notre_histoire")
+     */
+    public function notreHistoireAction(Request $request)
+    {
+        $utilisateur = $this->getUser();
+        $page = 3;
+        $em = $this->getDoctrine()->getManager();
+        // replace this example code with whatever you need
+        return $this->render('default\notreHistoire.html.twig', array(
+            'user' => $utilisateur,
+            'page' => $page
+        ));
+    }
+
+    /**
+     * @Route("/notre-equipe", name="notre_equipe")
+     */
+    public function notreEquipeAction(Request $request)
+    {
+        $utilisateur = $this->getUser();
+        $page = 4;
+        $em = $this->getDoctrine()->getManager();
+        // replace this example code with whatever you need
+        return $this->render('default\notreEquipe.html.twig', array(
+            'user' => $utilisateur,
+            'page' => $page
         ));
     }
 
