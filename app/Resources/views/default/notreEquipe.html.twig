@@ -9,7 +9,7 @@
     <div id="wrapper">
 
         <!-- header begin -->
-        <header>
+        <header class="header-solid header-light">
             <!-- mainmenu begin -->
             {% include 'default/modules/navbar.html.twig'%}
 
@@ -21,12 +21,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Présentation</h1>
+                        <h1 style="color:#981b70 !important">Présentation</h1>
                         <div class="small-border-deco"><span></span></div>
                         <ul class="crumb">
                             <li><a href="{{ path('accueil') }}">Accueil</a></li>
-                            <li class="sep"></li>
-                            <li>A propos</li>
+                            <li class="sep" style="color:#981b70 !important"></li>
+                            <li style="color:#981b70 !important">Notre équipe</li>
                         </ul>
                     </div>
                 </div>
@@ -35,134 +35,251 @@
         <!-- subheader close -->
 
         <!-- content begin -->
-        <div id="content" class="no-bottom">
+        <div id="content">
 
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
                         <div class="row">
-                            <div class="col-md-12">
-                                <h3>A propos</h3>
-                                <p style="text-align: justify;">INGENIERIE ET TRAVAUX AKOUTROU (ITA SARL) est une entreprise spécialisée dans les domaines du Bâtiment et Travaux Publics (BTP), de l’Electricité, des Télécoms, de l’Informatique et de la Sécurité électronique.
+                            <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
 
-                                    Notre objectif est de fournir une expertise dans ces domaines d’activités. Nous accordons donc un grand intérêt à la qualité du travail et au respect du délai en offrant une disponibilité et un service personnalisé et sur mesure à chacun de nos clients.
-
-                                    L’entreprise exerce aujourd’hui une présence incontestable dans les différentes activités du BTP avec un professionnalisme reconnu.
-
-                                    Parallèlement, elle apporte des solutions innovantes et alternatives en matière de sécurité électronique,  de technologies de l’information et de la communication …
-
-                                    Fidèle à ses valeurs (respect, confiance, ambition et innovation), en privilégiant des valeurs de références comme le sens de l'accueil, la politesse, la propreté des installations et des chantiers, la sécurité des personnes et des biens qui sont les fondements d'un véritable professionnalisme, ITA SARL est toujours plus appréciée par l'ensemble de ses partenaires : client, personnel, prestataire, riverain, …
-
-                                    Formant une équipe soudée, structurée et professionnelle, ITA SARL a établi une culture d'entreprise et de travail qui lui est propre, où chaque travailleur trouve sa place et peut mettre à profit ses compétences.
-
-                                    Pour consolider ses qualités et atouts, l’entreprise, en plus de son personnel qualifié et compétent, s’est dotée d’équipements adéquats et performants.
-
-                                    N’hésitez donc pas à nous contacter car l'ensemble de nos compétences nous permet de répondre à toutes vos attentes !
-                                </p>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="padding30 mb30" data-bgcolor="#eee">
-                                    <div class="box-icon-simple left">
-                                        {# <i class="icon_comment_alt wow bounceIn id-color" data-wow-delay=".5s"></i> #}
-                                        <div class="text" style="margin-left:0px">
-                                            <h3>Bâtiment</h3>
-                                            Etude et exécution de projets : 
-                                            <ul>
-                                                <li>plans, devis, calcul de structure, construction, réhabilitation</li>
-                                                <li>Etude et exécution d'ouvrage en béton: fondation, élévation</li>
-                                                <li>Etude et exécution de corps d'états secondaires: peinture, carrelage, électricité, plomberie, étanchéité</li>
-                                                <li>Etude et exécution de structures métalliques : charpente métallique, pylône téléphonique, pylône pétrolier, ...</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    <h3>Jules Konan</h3>
+                                    <span class="subtitle">Gérant</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									<br>
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="padding30 mb30" data-bgcolor="#eee">
-                                    <div class="box-icon-simple left">
-                                        {# <i class="icon_clock_alt wow bounceIn id-color" data-wow-delay=".5s"></i> #}
-                                        <div class="text" style="margin-left:0px">
-                                            <h3>Travaux Publics</h3>
-                                            <ul>
-                                                <li>Etude et exécution de projets routiers : routes revêtues, routes en terre, réparation de dégradations, ouvrage de franchissement</li>
-                                                <li>Etude et exécution de plates-formes: état des lieux, terrassements</li>
-                                                <li>Etude et exécution de projets d'adduction d'eau potable: canalisation: (PVC-Fonte-acier), équipement de forage, château d'eau</li>
-                                                <br>
-                                                <br>
-                                                <br>
-                                            </ul>
-                                        </div>
-                                    </div>
+                            <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
+                                    <h3>GBERI Aka Michèle</h3>
+                                    <span class="subtitle">Sécrétaire</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									<br>
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="padding30 mb30" data-bgcolor="#eee">
-                                    <div class="box-icon-simple left">
-                                        {# <i class="icon_comment_alt wow bounceIn id-color" data-wow-delay=".5s"></i> #}
-                                        <div class="text" style="margin-left:0px">
-                                            <h3>Informatique & Télécom</h3>
-                                            <ul>
-                                                <li>Maintenance des équipements audiovisuel et informatique et de communication (VSAT, BRL, Fibre optique, Radio etc.)</li>
-                                                <li>Conception de site web</li>
-                                                <li>Formation et assistance à l'utilisation des logiciels des procédures de maintenance de sauvegarde et de sécurité</li>
-                                                <li>Développement de logiciel</li>
-                                                <li>Fourniture de consommables informatiques</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                            <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
+                                    <h3>Yamien Jean-Roland</h3>
+                                    <span class="subtitle">Géomètre</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									<br>
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="padding30 mb30" data-bgcolor="#eee">
-                                    <div class="box-icon-simple left">
-                                        {# <i class="icon_comment_alt wow bounceIn id-color" data-wow-delay=".5s"></i> #}
-                                        <div class="text" style="margin-left:0px">
-                                            <h3>Electricité</h3>
-                                            <ul>
-                                                <li>Extension de réseaux électriques (lignes BT, ligne MT, ...)</li>
-                                                <li>Développement de nouveaux réseaux (lignes BT, lignes MT, ...)</li>
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <br>
-                                            </ul>
-                                        </div>
-                                    </div>
+                            <div class="spacer-single"></div>
+                            <div class="spacer-half"></div>
+
+                            <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
+
+                                    <h3>Konan Yao Richard</h3>
+                                    <span class="subtitle">Chauffeur de port-char</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									<br>
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="padding30 mb30" data-bgcolor="#eee">
-                                    <div class="box-icon-simple left">
-                                        {# <i class="icon_comment_alt wow bounceIn id-color" data-wow-delay=".5s"></i> #}
-                                        <div class="text" style="margin-left:0px">
-                                            <h3>Sécurité électronique</h3>
-                                            <ul>
-                                                <li>Vidéo surveillance</li>
-                                                <li>Contrôle d'accès</li>
-                                                <li>Alarme anti-intrusion</li>
-                                                <li>Alarme incendie, ...</li>
-                                                <br>
-                                            </ul>
-                                        </div>
-                                    </div>
+                            <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
+                                    <h3>Kouakou Yao Serge</h3>
+                                    <span class="subtitle">Conducteur de Travaux</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									<br>
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
                                 </div>
                             </div>
+
+                            <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
+                                    <h3>Kouakou Brou David</h3>
+                                    <span class="subtitle">Chef de service Télécoms</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									<br>
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
+                                    <h3>Tuo Gnènètchomontchin Lazeni</h3>
+                                    <span class="subtitle">Chef de service BTP</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									{# <br> #}
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+                                </div>
+                            </div>  
+
+                            <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
+                                    <h3>Kobenan Kouadjo</h3>
+                                    <span class="subtitle">Technicien Télécom</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									<br>
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+                                </div>
+                            </div>  
+
+                            <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
+                                    <h3>N'Gotta Kouamé Delphin</h3>
+                                    <span class="subtitle">Soudeur / Technicien Télécom</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									<br>
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+                                </div>
+                            </div>  
+
+                            <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
+                                    <h3>Hussein Fakih Ali</h3>
+                                    <span class="subtitle">Chargé Etudes et Travaux</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									<br>
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+                                </div>
+                            </div>  
+
+                            <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
+                                    <h3>Alangba Kolou Magloire</h3>
+                                    <span class="subtitle">Chef chantier</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									<br>
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+                                </div>
+                            </div>  
+
+                            <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
+                                    <h3>Mlle N'Guessan N'Dri Marlyse Eveline</h3>
+                                    <span class="subtitle">Comptable</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									<br>
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+                                </div>
+                            </div>  
+
+                            <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
+                                    <h3>Sidibe Soumaîla</h3>
+                                    <span class="subtitle">Conducteur engins</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									<br>
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+                                </div>
+                            </div>  
+
+                            <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
+                                    <h3>Kouadio Kouassi Jean</h3>
+                                    <span class="subtitle">Chef chantier</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									<br>
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+                                </div>
+                            </div>  
+
+                             <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
+                                    <h3>Kone Aïsha</h3>
+                                    <span class="subtitle">Chef chantier</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									<br>
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+                                </div>
+                            </div>  
+
+                             <div class="col-md-4">
+                                <div class="profile_pic">
+                                    <figure class="pic-hover hover-scale mb30">
+                                        <img src="{{ asset('bundles/images/team/avatar.png')}}" class="img-responsive" alt="">
+                                    </figure>
+                                    <h3>Brou Kadja Claude</h3>
+                                    <span class="subtitle">Géomètre</span>
+                                    <span class="tiny-border"></span>
+                                    {# Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo. #}
+									<br>
+                                    {# <a href="#" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+                                </div>
+                            </div>  
 
                         </div>
                     </div>
 
+
                     <aside id="sidebar" class="col-md-3">
                         <div class="widget">
                             <ul id="services-list">
-                                <li class="active"><a href="about.html">A propos</a></li>
-                                <li><a href="about-history.html">Notre histoire</a></li>
-                                <li><a href="about-team.html">Notre equipe</a></li>
+                                <li><a href="{{ path('apropos') }}">A propos</a></li>
+                                <li><a href="{{ path('notre_histoire') }}">Notre histoire</a></li>
+                                <li class="active"><a href="{{ path('notre_equipe') }}">Notre équipe</a></li>
                             </ul>
                         </div>
 
@@ -171,7 +288,7 @@
                                 <h4 class="text-center">Notre catalogue</h4>
                                 <p class="text-center" style="margin-bottom: 0;">Téléchargez notre catalogue.</p>
 								<div class="text-center">
-                                    <a href="contact.html" class="btn btn-line-black btn-fx mt20">Cliquez-ici</a>
+                                    <a href="" class="btn btn-line-black btn-fx mt20">Cliquez-ici</a>
                                 </div>
                             </div>
                         </div>
@@ -181,23 +298,6 @@
 
                 </div>
             </div>
-
-            <!-- section begin -->
-            <section class="call-to-action bg-color dark pt20 pb20 mt80" data-speed="5" data-type="background">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h3 class="mt10" style="color:white !important">Vous avez besoin d'un partenaire pour un projet de construction ?</h3>
-                        </div>
-
-                        <div class="col-md-4 text-right">
-                            <a href="contact.html" class="btn btn-line-black btn-fx wow fadeIn">Demander un devis</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- section close -->
-
 
         </div>
 

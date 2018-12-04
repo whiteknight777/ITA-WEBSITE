@@ -1,0 +1,234 @@
+{% block title %}ITA - 2018{% endblock %}
+{% block description %}ITA est une entreprise de construction{% endblock %}
+{% block keywords %}{% endblock %}
+
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div id="wrapper">
+
+        <!-- header begin -->
+        <header class="header-solid header-light">
+            <!-- mainmenu begin -->
+            {% include 'default/modules/navbar.html.twig'%}
+
+        </header>
+        <!-- header close -->
+
+         <!-- subheader -->
+        <section id="subheader" data-stellar-background-ratio=".3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="color:#981b70 !important">Nos Références</h1>
+                        <div class="small-border-deco"><span></span></div>
+                        <ul class="crumb">
+                            <li style="color:#981b70 !important"><a href="{{ path('accueil') }}">Accueil</a></li>
+                            <li class="sep" style="color:#981b70 !important"></li>
+                            <li style="color:#981b70 !important">Nos références</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subheader close -->
+
+        <!-- content begin -->
+        <div id="content" class="no-top no-bottom">
+            <!-- section begin -->
+            <section id="section-portfolio" aria-label="section-portfolio" class="no-top no-bottom">
+                <div class="container">
+
+                    <div class="spacer-single"></div>
+
+                    <!-- portfolio filter begin -->
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <ul id="filters">
+                                <li><a href="#" data-filter="*" class="selected">Tout les projets</a></li>
+                                <li><a href="#" data-filter=".travauxPublics">Travaux Publics</a></li>
+                                <li><a href="#" data-filter=".autresProjets">Autres Projets</a></li>
+                                <li><a href="#" data-filter=".batiment">Batiment</a></li>
+                                <li><a href="#" data-filter=".informatique">Informatique Télécom</a></li>
+                                <li><a href="#" data-filter=".electricite">Electricité</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- portfolio filter close -->
+
+
+
+                    <div id="gallery" class="row grid_gallery gallery de-gallery">
+
+                        <!-- gallery item -->
+                        <div class="col-md-3 item travauxPublics">
+                            <div class="picframe">
+                                <a href="{{ path('details_references',{'id': 1}) }}">
+                                    <span class="overlay">
+                                        <span class="pf_text">
+                                            <span class="project-name" style="color:white">PROJET IMMOBILIER EVE - LA DJIBI 8E TRANCHE</span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <img src="{{ asset('bundles/images/projets/p1/1.jpg') }}" alt="" />
+                            </div>
+                        </div>
+                        <!-- close gallery item -->
+
+                        <!-- gallery item -->
+                        <div class="col-md-3 item travauxPublics">
+                            <div class="picframe">
+                                <a href="{{ path('details_references',{'id': 2}) }}">
+                                    <span class="overlay">
+                                        <span class="pf_text">
+                                            <span class="project-name" style="color:white">TRAVAUX DE DEVIATION DE RESEAU</span>
+                                        </span>
+                                    </span>
+                                </a>
+
+                                <img src="{{ asset('bundles/images/projets/p2/1.jpg') }}" alt="" />
+                            </div>
+                        </div>
+                        <!-- close gallery item -->
+
+                        <!-- gallery item -->
+                        <div class="col-md-3 item travauxPublics">
+                            <div class="picframe">
+                                <a href="{{ path('details_references',{'id' : 3}) }}">
+                                    <span class="overlay">
+                                        <span class="pf_text">
+                                            <span class="project-name" style="color:white">TRAVAUX D'AMENAGEMENT DU SITE</span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <img src="{{ asset('bundles/images/projets/p3/1.jpg') }}" alt="" />
+                            </div>
+                        </div>
+                        <!-- close gallery item -->
+
+                        <!-- gallery item -->
+                        <div class="col-md-3 item travauxPublics">
+                            <div class="picframe">
+                                <a href="{{ path('details_references',{'id' : 4}) }}">
+                                    <span class="overlay">
+                                        <span class="pf_text">
+                                            <span class="project-name" style="color:white">TRAVAUX D'HYDRAULIQUE URBAINE</span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <img src="{{ asset('bundles/images/projets/p4/1.jpg') }}" alt="" />
+                            </div>
+                        </div>
+                        <!-- close gallery item -->
+
+                        <!-- gallery item -->
+                        <div class="col-md-3 item batiment">
+                            <div class="picframe">
+                                <a href="{{ path('details_references',{'id' : 5}) }}">
+                                    <span class="overlay">
+                                        <span class="pf_text">
+                                            <span class="project-name" style="color:white">ETUDE DE PROJETS DE CONSTRUCTION</span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <img src="{{ asset('bundles/images/projets/p5/1.jpg') }}" alt="" />
+                            </div>
+                        </div>
+                        <!-- close gallery item -->
+
+                        <!-- gallery item -->
+                        <div class="col-md-3 item informatique">
+                            <div class="picframe">
+                                <a href="{{ path('details_references',{'id' : 6}) }}">
+                                    <span class="overlay">
+                                        <span class="pf_text">
+                                            <span class="project-name" style="color:white">TRAVAUX DE REHABILITATION DU RESEAU TELEPHONIQUE</span>
+                                        </span>
+                                    </span>
+                                </a>
+                                <img src="{{ asset('bundles/images/projets/p6/1.jpg') }}" alt="" />
+                            </div>
+                        </div>
+                        <!-- close gallery item -->
+
+                        <!-- gallery item -->
+                        <div class="col-md-3 item travauxPublics">
+                            <div class="picframe">
+                                <a href="{{ path('details_references',{'id' : 7}) }}">
+                                    <span class="overlay">
+                                        <span class="pf_text">
+                                            <span class="project-name" style="color:white">TRAVAUX DE CREATION D'UN CANAL EN TERRE</span>
+                                        </span>
+                                    </span>
+                                </a>
+
+                                <img src="{{ asset('bundles/images/projets/p7/1.jpg') }}" alt="" />
+                            </div>
+                        </div>
+                        <!-- close gallery item -->
+
+                        <!-- gallery item -->
+                        <div class="col-md-3 item batiment">
+                            <div class="picframe">
+                                <a href="{{ path('details_references',{'id' : 8}) }}">
+                                    <span class="overlay">
+                                        <span class="pf_text">
+                                            <span class="project-name" style="color:white !important">TRAVAUX DE COFFRAGE D'ELEMENTS EN BETON ARME</span>
+                                        </span>
+                                    </span>
+                                </a>
+
+                                <img src="{{ asset('bundles/images/projets/p8/1.jpg') }}" alt="" />
+                            </div>
+                        </div>
+                        <!-- close gallery item -->
+
+                        <!-- gallery item -->
+                        <div class="col-md-3 item autresProjets">
+                            <div class="picframe">
+                                <a href="{{ path('details_references',{'id': 9}) }}">
+                                    <span class="overlay">
+                                        <span class="pf_text">
+                                            <span class="project-name" style="color:white">ETUDE DU PROJET D'AMENAGEMENT </span>
+                                        </span>
+                                    </span>
+                                </a>
+
+                                <img src="{{ asset('bundles/images/projets/p9/1.jpg') }}" alt="" />
+                            </div>
+                        </div>
+                        <!-- close gallery item -->
+
+                      
+
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- section close -->
+			
+			<!-- section begin -->
+            <section class="call-to-action bg-color dark pt20 pb20 mt80" data-speed="5" data-type="background">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h3 class="mt10" style="color:white !important">Vous avez besoin d'un partenaire pour un projet de construction ?</h3>
+                        </div>
+
+                        <div class="col-md-4 text-right">
+                            <a href="" class="btn btn-line-black btn-fx wow fadeIn">Demander un devis</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section close -->
+
+
+
+        </div>
+
+    </div>
+{% endblock %}

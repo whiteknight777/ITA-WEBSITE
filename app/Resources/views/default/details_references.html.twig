@@ -1,0 +1,213 @@
+{% block title %}ITA - 2018{% endblock %}
+{% block description %}ITA est une entreprise de construction{% endblock %}
+{% block keywords %}{% endblock %}
+
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div id="wrapper">
+
+        <!-- header begin -->
+        <header class="header-solid header-light">
+            <!-- mainmenu begin -->
+            {% include 'default/modules/navbar.html.twig'%}
+
+        </header>
+        <!-- header close -->
+
+         <!-- subheader -->
+        <section id="subheader" data-stellar-background-ratio=".3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="color:#981b70 !important">Nos Références</h1>
+                        <div class="small-border-deco"><span></span></div>
+                        <ul class="crumb">
+                            <li style="color:#981b70 !important"><a href="{{ path('accueil') }}">Accueil</a></li>
+                            <li class="sep" style="color:#981b70 !important"></li>
+                            <li style="color:#981b70 !important">Nos références</li>
+                            <li class="sep" style="color:#981b70 !important"></li>
+                            <li style="color:#981b70 !important">Projet {{id}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subheader close -->
+
+        <!-- content begin -->
+        <div id="content">
+            <div class="container">
+                <div class="row mb40" data-bgcolor="#f5f5f5" style="padding: 20px;">
+                
+					
+                    <div class="col-md-12">
+                    <h3>TRAVAUX DE DEVIATION DE RESEAU UNITAIRE DANS L'EMPRISE DU CHAIN HOTEL AU PLATEAU BOULEVARD DE GAULE</h3>
+                    <span class="tiny-border"></span>
+
+                        <div class="info-details mt40">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="info-text">
+                                        <span class="title">Client:</span>
+                                        <span class="val">CHAIN HOTEL</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="info-text">
+                                        <span class="title">Localisation:</span>
+                                        <span class="val">Abidjan, Plateau</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="info-text">
+                                        <span class="title">Année:</span>
+                                        <span class="val">2013</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 mb40">
+                        <!-- portfolio filter begin -->
+                        <ul id="filters">
+                            <li><a href="#" data-filter="*" class="selected">Toutes les images</a></li>
+                            <li><a href="#" data-filter=".avant">Avant</a></li>
+                            <li><a href="#" data-filter=".pendant">Pendant</a></li>
+                            <li><a href="#" data-filter=".après">Après</a></li>
+                        </ul>
+
+                    </div>
+                        
+                    <!-- portfolio filter close -->
+                    <div class="col-md-12 mb40">
+                        <div id="gallery" class="row grid_gallery gallery de-gallery">
+
+                            <!-- gallery item -->
+                            <div class="col-md-3 item pendant">
+                                <div class="picframe">
+                                    <a class="image-popup-gallery" href="{{ asset('bundles/images/projets/p1/1.jpg')}}">
+                                        <span class="overlay">
+                                            <span class="pf_text">
+                                                <span class="project-name">Eco Green Interior</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <img src="{{ asset('bundles/images/projets/p1/1.jpg')}}" alt="" />
+                                </div>
+                            </div>
+                            <!-- close gallery item -->
+
+                            <!-- gallery item -->
+                            <div class="col-md-3 item pendant">
+                                <div class="picframe">
+                                    <a class="image-popup-gallery" href="{{ asset('bundles/images/projets/p1/2.jpg')}}">
+                                        <span class="overlay">
+                                            <span class="pf_text">
+                                                <span class="project-name">Modern Elegance Suite</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <img src="{{ asset('bundles/images/projets/p1/2.jpg')}}" alt="" />
+                                </div>
+                            </div>
+                            <!-- close gallery item -->
+
+                            <!-- gallery item -->
+                            <div class="col-md-3 item avant">
+                                <div class="picframe">
+                                    <a class="image-popup-gallery" href="{{ asset('bundles/images/projets/p1/3.jpg')}}">
+                                        <span class="overlay">
+                                            <span class="pf_text">
+                                                <span class="project-name">Apartment Renovation</span>
+                                            </span>
+                                        </span>
+                                    </a>
+
+                                    <img src="{{ asset('bundles/images/projets/p1/3.jpg')}}" alt="" />
+                                </div>
+                            </div>
+                            <!-- close gallery item -->
+
+                            <!-- gallery item -->
+                            <div class="col-md-3 item pendant">
+                                <div class="picframe">
+                                    <a class="image-popup-gallery" href="{{ asset('bundles/images/projets/p1/4.jpg')}}">
+                                        <span class="overlay">
+                                            <span class="pf_text">
+                                                <span class="project-name">Bedroom Make Over</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <img src="{{ asset('bundles/images/projets/p1/4.jpg')}}" alt="" />
+                                </div>
+                            </div>
+                            <!-- close gallery item -->
+
+                            <!-- gallery item -->
+                            <div class="col-md-3 item pendant">
+                                <div class="picframe">
+                                    <a class="image-popup-gallery" href="{{ asset('bundles/images/projets/p1/5.jpg')}}">
+                                        <span class="overlay" style="height:197px !important;">
+                                            <span class="pf_text">
+                                                <span class="project-name">Modern Office</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <img src="{{ asset('bundles/images/projets/p1/5.jpg')}}" alt="" style="height:197px !important;"/>
+                                </div>
+                            </div>
+                            <!-- close gallery item -->
+
+                            <!-- gallery item -->
+                            <div class="col-md-3 item pendant">
+                                <div class="picframe">
+                                    <a class="image-popup-gallery" href="{{ asset('bundles/images/projets/p1/6.jpg')}}">
+                                        <span class="overlay">
+                                            <span class="pf_text">
+                                                <span class="project-name">Restaurant In Texas</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <img src="{{ asset('bundles/images/projets/p1/6.jpg')}}" alt="" />
+                                </div>
+                            </div>
+                            <!-- close gallery item -->
+
+
+                        </div>
+                    </div>
+                </div>
+                    
+					
+            </div>
+
+
+
+        </div>
+
+        <section class="pt40 pb30" data-bgcolor="#eee">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="de-arrow-nav-set">
+                            <a href=""><i class="arrow_left pull-left"></i></a>
+                            <a href="{{ path('references') }}"><i class="icon_menu"></i></a>
+                            <a href=""><i class="arrow_right pull-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+{% endblock %}

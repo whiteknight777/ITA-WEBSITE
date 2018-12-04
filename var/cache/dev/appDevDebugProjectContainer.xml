@@ -471,8 +471,6 @@
       <parameter>Default</parameter>
     </parameter>
     <parameter key="web_profiler.debug_toolbar.position">bottom</parameter>
-    <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
-    <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
     <parameter key="data_collector.templates" type="collection">
       <parameter key="data_collector.request" type="collection">
         <parameter>request</parameter>
@@ -610,7 +608,7 @@
                 <tag name="cache.pool" clearer="cache.default_clearer"/>
                 <argument>LdPy2xdZVa</argument>
                 <argument>0</argument>
-                <argument>VgxufwSUYVdvO3lZbgne4w</argument>
+                <argument>cY3QIlKf507bJ+EwkKCiZh</argument>
                 <argument>C:\wamp64\www\ITA-WEBSITE\var\cache\dev/pools</argument>
                 <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                 <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -793,7 +791,7 @@
       <tag name="cache.pool" clearer="cache.default_clearer"/>
       <argument>lnLkyTZu8x</argument>
       <argument>0</argument>
-      <argument>VgxufwSUYVdvO3lZbgne4w</argument>
+      <argument>cY3QIlKf507bJ+EwkKCiZh</argument>
       <argument>C:\wamp64\www\ITA-WEBSITE\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -803,7 +801,7 @@
       <tag name="cache.pool" clearer="cache.default_clearer"/>
       <argument>kX4hyFdCon</argument>
       <argument>0</argument>
-      <argument>VgxufwSUYVdvO3lZbgne4w</argument>
+      <argument>cY3QIlKf507bJ+EwkKCiZh</argument>
       <argument>C:\wamp64\www\ITA-WEBSITE\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -2011,10 +2009,6 @@
         <argument>debug.dump_listener</argument>
         <argument>Symfony\Component\HttpKernel\EventListener\DumpListener</argument>
       </call>
-      <call method="addSubscriberService">
-        <argument>web_profiler.debug_toolbar</argument>
-        <argument>Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener</argument>
-      </call>
     </service>
     <service id="debug.controller_resolver" class="Symfony\Component\HttpKernel\Controller\TraceableControllerResolver">
       <tag name="monolog.logger" channel="request"/>
@@ -2198,7 +2192,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5bfea76d4c41e7.75933640</argument>
+            <argument>5c0671b8e4e6b1.18347913</argument>
           </service>
         </argument>
       </argument>
@@ -2495,7 +2489,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>5bfea76d4c41e7.75933640</argument>
+            <argument>5c0671b8e4e6b1.18347913</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -3926,7 +3920,7 @@
       <argument type="service" id="debug.stopwatch" on-invalid="ignore"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
       <argument>UTF-8</argument>
-      <argument type="service" id="request_stack"/>
+      <argument>null</argument>
       <argument>null</argument>
     </service>
     <service id="debug.dump_listener" class="Symfony\Component\HttpKernel\EventListener\DumpListener">
@@ -4018,7 +4012,13 @@
         </argument>
       </argument>
       <argument>bottom</argument>
-      <argument type="service" id="web_profiler.csp.handler"/>
+      <argument type="service">
+        <service class="Symfony\Bundle\WebProfilerBundle\Csp\ContentSecurityPolicyHandler" public="false">
+          <argument type="service">
+            <service class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
+          </argument>
+        </service>
+      </argument>
       <argument>C:\wamp64\www\ITA-WEBSITE</argument>
     </service>
     <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController">
@@ -4030,21 +4030,6 @@
       <argument type="service" id="profiler" on-invalid="null"/>
       <argument type="service" id="twig"/>
       <argument>true</argument>
-    </service>
-    <service id="web_profiler.csp.handler" class="Symfony\Bundle\WebProfilerBundle\Csp\ContentSecurityPolicyHandler" public="false">
-      <argument type="service">
-        <service class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
-      </argument>
-    </service>
-    <service id="web_profiler.debug_toolbar" class="Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener">
-      <tag name="kernel.event_subscriber"/>
-      <argument type="service" id="twig"/>
-      <argument>false</argument>
-      <argument>2</argument>
-      <argument>bottom</argument>
-      <argument type="service" id="router" on-invalid="ignore"/>
-      <argument>^/(app(_[\w]+)?\.php/)?_wdt</argument>
-      <argument type="service" id="web_profiler.csp.handler"/>
     </service>
     <service id="sensio_distribution.security_checker" class="SensioLabs\Security\SecurityChecker"/>
     <service id="sensio_distribution.security_checker.command" class="SensioLabs\Security\Command\SecurityCheckerCommand">

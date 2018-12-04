@@ -4,8 +4,8 @@
             <div class="col-md-8">
                 <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>Abidjan Cocody Danga </div>
                 <div class="col"><span class="id-color"><i class="fa fa-clock-o"></i></span>Lundi - Vendredi 08:00-17:00</div>
-                <div class="col"><span class="id-color"><i class="fa fa-phone"></i></span>225 XX XX XX XX</div>
-                <div class="col">
+                <div class="col"><span class="id-color"><i class="fa fa-phone"></i></span>+225 22 44 77 77</div>
+                {# <div class="col">
                     <div id="lang-selector" class="dropdown">
                         <a href="#" class="btn-selector">Français</a>
                         <ul>
@@ -14,7 +14,7 @@
                             <li><a href="#">Anglais</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> #}
                 
             </div>
             <div class="col-md-4 text-right">
@@ -48,9 +48,11 @@
             <!-- mainmenu begin -->
             <nav>
                 <ul id="mainmenu">
-                    <li><a href="{{ path('accueil') }}">Accueil</a>
+                    <li {% if page == 1 %}class="active"{% endif %}>
+                        <a href="{{ path('accueil') }}">Accueil </a>
                     </li>
-                    <li><a href="{{ path('apropos') }}">Présentation</a>
+                    <li {% if page == 2 or page == 3 or page == 4 %}class="active"{% endif %}>
+                        <a href="{{ path('apropos') }}">Présentation</a>
                         <ul>
                             <li><a href="{{ path('apropos') }}">A propos</a></li>
                             <li><a href="{{ path('notre_histoire') }}">Notre Histoire</a></li>
@@ -58,19 +60,22 @@
                         </ul>
                     </li>
                     
-                    <li><a href="services.html">Nos activités</a>
-                        <ul>
+                    <li {% if page == 5  %}class="active"{% endif %}>
+                        <a href="{{ path('nos_activites') }}">Nos activités</a>
+                        {# <ul>
                             <li><a href="service-1.html">Bâtiment</a></li>
                             <li><a href="service-2.html">Travaux Publics</a></li>
                             <li><a href="service-3.html">Informatique & Télécom</a></li>
                             <li><a href="service-4.html">Electricité</a></li>
                             <li><a href="service-5.html">Sécurité électronique</a></li>
-                        </ul>
+                        </ul> #}
                     </li>
-                    <li>
-                    <a href="projects-grid-4-cols.html">Références</a>
+                    <li {% if page == 6  %}class="active"{% endif %}>
+                        <a href="{{ path('references') }}">Références</a>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li {% if page == 7  %}class="active"{% endif %}>
+                        <a href="{{ path('contact') }}">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </div>

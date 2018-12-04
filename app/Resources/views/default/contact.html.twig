@@ -1,0 +1,112 @@
+{% block title %}ITA - 2018{% endblock %}
+{% block description %}ITA est une entreprise de construction{% endblock %}
+{% block keywords %}{% endblock %}
+
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div id="wrapper">
+
+        <!-- header begin -->
+        <header class="header-solid header-light">
+            <!-- mainmenu begin -->
+            {% include 'default/modules/navbar.html.twig'%}
+
+        </header>
+        <!-- header close -->
+
+         <!-- subheader -->
+        <section class="page-contact" id="subheader" data-stellar-background-ratio=".3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="color:#981b70 !important">Contactez-nous</h1>
+                        <div class="small-border-deco"><span></span></div>
+                        <ul class="crumb">
+                            <li style="color:#981b70 !important"><a href="{{ path('accueil') }}">Accueil</a></li>
+                            <li class="sep" style="color:#981b70 !important"></li>
+                            <li style="color:#981b70 !important">Contact</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subheader close -->
+
+        <!-- content begin -->
+        <div id="content">
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="de_tab tab_style_2">
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="map-container">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1986.2381298074981!2d-4.006970516510588!3d5.34402959951545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1eb0c78d7201f%3A0xadc1d12d0ebd21e6!2sITA+SARL!5e0!3m2!1sfr!2sci!4v1543916281595" width="600" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <address class="address-style-2">
+                                                <span><strong>Adresse:</strong>Abidjan - Cocody - Danga, 117 Rue Pitot</span>
+                                                <span><strong>Phone:</strong>+225 22 44 77 77</span>
+                                                <span><strong>Fax:</strong>+225 22 44 37 47</span>
+                                                <span><strong>Email:</strong><a href="mailto:info@itasarl.com">info@itasarl.com</a></span>
+                                                <span><strong>Horaires</strong>Lundi - Vendredi 08:00-17:00</span>
+                                            </address>
+                                        </div>
+                                    </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="padding30" data-bgcolor="#f5f5f5">
+
+                            <h3>Contactez-nous
+							<span class="tiny-border"></span>
+                            </h3>
+                            <form name="contactForm" id='contact_form' method="post" action='email.php'>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id='name_error' class='error'>Veuillez renseigner votre nom & prénom(s).</div>
+                                        <div>
+                                            <input type='text' name='name' id='name' class="form-control" placeholder="Nom & Prénom(s)">
+                                        </div>
+
+                                        <div id='email_error' class='error'>Veuillez renseigner une adresse e-mail valide.</div>
+                                        <div>
+                                            <input type='text' name='email' id='email' class="form-control" placeholder="Email">
+                                        </div>
+
+                                        <div id='message_error' class='error'>Saisissez votre message.</div>
+                                        <div>
+                                            <textarea name='message' id='message' class="form-control" placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div id='submit'>
+                                            <input type='submit' id='send_message' value='Envoyer Message' class="btn btn-line">
+                                        </div>
+                                        <div id='mail_success' class='success'>Votre message à été envoyé avec succès.</div>
+                                        <div id='mail_fail' class='error'>Désolé, une érreur est survenue pendant l'envoi du message.</div>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

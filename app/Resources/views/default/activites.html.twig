@@ -1,0 +1,174 @@
+{% block title %}ITA - 2018{% endblock %}
+{% block description %}ITA est une entreprise de construction{% endblock %}
+{% block keywords %}{% endblock %}
+
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div id="wrapper">
+
+        <!-- header begin -->
+       <header class="header-solid header-light">
+            <!-- mainmenu begin -->
+            {% include 'default/modules/navbar.html.twig'%}
+        </header>
+        <!-- header close -->
+
+         <!-- subheader -->
+        <section id="subheader" data-stellar-background-ratio=".3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="color:#981b70 !important">Nos Activités</h1>
+                        <div class="small-border-deco"><span></span></div>
+                        <ul class="crumb">
+                            <li><a href="{{ path('accueil') }}">Accueil</a></li>
+                            <li class="sep" style="color:#981b70 !important"></li>
+                            <li style="color:#981b70 !important">Nos activités</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- subheader close -->
+
+        <!-- content begin -->
+        <div id="content" class="no-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 mb30">
+                        <figure class="pic-hover hover-scale mb20">
+                            {# <span class="center-xy">
+                                <a href="service-1.html">
+                                    <i class="fa fa-plus btn-action btn-action-hide"></i>
+                                </a>
+                            </span>
+                            <span class="bg-overlay"></span> #}
+                            <img src="{{ asset('bundles/images/construction_maison.jpg')}}" class="img-responsive" alt="" style="height: 240px;">
+                        </figure>
+
+                        <h3>Bâtiment</h3>
+                        Etude et exécution de projets : 
+                        <ul>
+                            <li>plans, devis, calcul de structure, construction, réhabilitation</li>
+                            <li>Etude et exécution d'ouvrage en béton: fondation, élévation</li>
+                            <li>Etude et exécution de corps d'états secondaires: peinture, carrelage, électricité, plomberie, étanchéité</li>
+                            <li>Etude et exécution de structures métalliques : charpente métallique, pylône téléphonique, pylône pétrolier, ...</li>
+                        </ul>
+                        {# <a href="service-1.html" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 mb30">
+                       <figure class="pic-hover hover-scale mb20">
+                            {# <span class="center-xy">
+                                <a href="service-1.html">
+                                    <i class="fa fa-plus btn-action btn-action-hide"></i>
+                                </a>
+                            </span>
+                            <span class="bg-overlay"></span> #}
+                            <img src="{{ asset('bundles/images/travaux-publics.jpg')}}" class="img-responsive" alt="" style="height: 240px;">
+                        </figure>
+
+                        <h3>Travaux Publics</h3>
+                        <ul>
+                            <li>Etude et exécution de projets routiers : routes revêtues, routes en terre, réparation de dégradations, ouvrage de franchissement</li>
+                            <li>Etude et exécution de plates-formes: état des lieux, terrassements</li>
+                            <li>Etude et exécution de projets d'adduction d'eau potable: canalisation: (PVC-Fonte-acier), équipement de forage, château d'eau</li>
+                        </ul>
+                        {# <a href="service-2.html" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 mb30">
+                       <figure class="pic-hover hover-scale mb20">
+                            {# <span class="center-xy">
+                                <a href="service-1.html">
+                                    <i class="fa fa-plus btn-action btn-action-hide"></i>
+                                </a>
+                            </span>
+                            <span class="bg-overlay"></span> #}
+                            <img src="{{ asset('bundles/images/informatique-et-telecom.jpg')}}" class="img-responsive" alt="" style="height: 240px;">
+                        </figure>
+
+                        <h3>Informatique & Télécom</h3>
+                        <ul>
+                            <li>Maintenance des équipements audiovisuel et informatique et de communication (VSAT, BRL, Fibre optique, Radio etc.)</li>
+                            <li>Conception de site web</li>
+                            <li>Formation et assistance à l'utilisation des logiciels des procédures de maintenance de sauvegarde et de sécurité</li>
+                            <li>Développement de logiciel</li>
+                            <li>Fourniture de consommables informatiques</li>
+                        </ul>
+                        {# <a href="service-3.html" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="col-md-4 col-sm-6 mb30">
+                       <figure class="pic-hover hover-scale mb20">
+                            {# <span class="center-xy">
+                                <a href="service-1.html">
+                                    <i class="fa fa-plus btn-action btn-action-hide"></i>
+                                </a>
+                            </span>
+                            <span class="bg-overlay"></span> #}
+                            <img src="{{ asset('bundles/images/electricite.jpg')}}" class="img-responsive" alt="" style="height: 240px;">
+                        </figure>
+
+                        <h3>Electricité</h3>
+                        <ul>
+                            <li>Extension de réseaux électriques (lignes BT, ligne MT, ...)</li>
+                            <li>Développement de nouveaux réseaux (lignes BT, lignes MT, ...)</li>
+                        </ul>
+                        {# <a href="service-4.html" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 mb30">
+                        <figure class="pic-hover hover-scale mb20">
+                            {# <span class="center-xy">
+                                <a href="service-1.html">
+                                    <i class="fa fa-plus btn-action btn-action-hide"></i>
+                                </a>
+                            </span>
+                            <span class="bg-overlay"></span> #}
+                            <img src="{{ asset('bundles/images/electronic-security.jpg')}}" class="img-responsive" alt="" style="height: 240px;">
+                        </figure>
+
+                        <h3>Sécurité électronique</h3>
+                        <ul>
+                            <li>Vidéo surveillance</li>
+                            <li>Contrôle d'accès</li>
+                            <li>Alarme anti-intrusion</li>
+                            <li>Alarme incendie, ...</li>
+                        </ul>
+                        {# <a href="service-5.html" class="read_more mt10">read more <i class="fa fa-chevron-right id-color"></i></a> #}
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- section begin -->
+            <section class="call-to-action bg-color dark pt20 pb20 mt80" data-speed="5" data-type="background">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h3 class="mt10" style="color:white !important">Vous avez besoin d'un partenaire pour un projet de construction ?</h3>
+                        </div>
+
+                        <div class="col-md-4 text-right">
+                            <a href="" class="btn btn-line-black btn-fx wow fadeIn">Demander un devis</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- logo carousel section close -->
+
+        </div>
+
+    </div>
+{% endblock %}

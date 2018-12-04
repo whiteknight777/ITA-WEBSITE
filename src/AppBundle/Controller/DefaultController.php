@@ -95,4 +95,65 @@ class DefaultController extends Controller
         ));
     }
 
+    /**
+     * @Route("/nos-activites", name="nos_activites")
+     */
+    public function activitesAction(Request $request)
+    {
+        $utilisateur = $this->getUser();
+        $page = 5;
+        $em = $this->getDoctrine()->getManager();
+        // replace this example code with whatever you need
+        return $this->render('default\activites.html.twig', array(
+            'user' => $utilisateur,
+            'page' => $page
+        ));
+    }
+
+    /**
+     * @Route("/references", name="references")
+     */
+    public function referencesAction(Request $request)
+    {
+        $utilisateur = $this->getUser();
+        $page = 6;
+        $em = $this->getDoctrine()->getManager();
+        // replace this example code with whatever you need
+        return $this->render('default\references.html.twig', array(
+            'user' => $utilisateur,
+            'page' => $page
+        ));
+    }
+
+    /**
+     * @Route("/references/{id}", name="details_references")
+     */
+    public function detailsReferencesAction(Request $request, $id)
+    {
+        $utilisateur = $this->getUser();
+        $page = 7;
+        $em = $this->getDoctrine()->getManager();
+        // replace this example code with whatever you need
+        return $this->render('default\details_references.html.twig', array(
+            'user' => $utilisateur,
+            'page' => $page,
+            'id' => $id,
+        ));
+    }
+
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contactAction(Request $request)
+    {
+        $utilisateur = $this->getUser();
+        $page = 8;
+        $em = $this->getDoctrine()->getManager();
+        // replace this example code with whatever you need
+        return $this->render('default\contact.html.twig', array(
+            'user' => $utilisateur,
+            'page' => $page
+        ));
+    }
+
 }

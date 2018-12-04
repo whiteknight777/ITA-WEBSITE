@@ -9,7 +9,7 @@
     <div id="wrapper">
 
         <!-- header begin -->
-        <header>
+        <header class="header-solid header-light">
             <!-- mainmenu begin -->
             {% include 'default/modules/navbar.html.twig'%}
 
@@ -21,12 +21,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Présentation</h1>
+                        <h1 style="color:#981b70 !important">Présentation</h1>
                         <div class="small-border-deco"><span></span></div>
                         <ul class="crumb">
                             <li><a href="{{ path('accueil') }}">Accueil</a></li>
-                            <li class="sep"></li>
-                            <li>A propos</li>
+                            <li class="sep" style="color:#981b70 !important"></li>
+                            <li style="color:#981b70 !important">Notre histoire</li>
                         </ul>
                     </div>
                 </div>
@@ -40,6 +40,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
+                        <h3>Notre histoire</h3>
                         <p class="intro mb30">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
                         <div class="timeline">
@@ -148,7 +149,6 @@
                         </div>
                     </div>
 
-
                     <aside id="sidebar" class="col-md-3">
                         <div class="widget">
                             <ul id="services-list">
@@ -159,16 +159,14 @@
                         </div>
 
                         <div class="widget">
-                            <div class="padding30 text-black" data-bgimage="url(images/background/banner-1.jpg)">
-                                <h4>Attention!</h4>
-                                Looking for best partner for your next construction works? Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+                            <div class="padding30 text-black" data-bgimage="url({{ asset('bundles/images/background/banner-1.jpg') }})">
+                                <h4 class="text-center">Notre catalogue</h4>
+                                <p class="text-center" style="margin-bottom: 0;">Téléchargez notre catalogue.</p>
 								<div class="text-center">
-                                    <a href="contact.html" class="btn btn-line-black btn-fx mt20">Hire Us Now</a>
+                                    <a href="" class="btn btn-line-black btn-fx mt20">Cliquez-ici</a>
                                 </div>
                             </div>
                         </div>
-
-
                     </aside>
 
                 </div>

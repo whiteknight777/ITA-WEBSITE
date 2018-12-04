@@ -9,7 +9,7 @@
     <div id="wrapper">
 
         <!-- header begin -->
-        <header>
+        <header class="header-solid header-light">
             <!-- mainmenu begin -->
             {% include 'default/modules/navbar.html.twig'%}
 
@@ -129,7 +129,7 @@
                     <div class="row-fluid table">
 
                         <div class="col-md-6">
-                            <div class="padding80">
+                            <div class="padding35">
                                 <h2 class="wow fadeInUp" style="color:#981b70">Qui sommes nous ?<span class="tiny-border" style="background-color: #981b70;"></span></h2>
                                 <p class="intro">
                                  ITA SARL est une entreprise spécialisée dans les
@@ -165,7 +165,7 @@
                                     </div>
                                 </div>
 
-                                <a href="about-history.html" class="btn btn-line-black btn-fx pull-right wow fadeIn" data-wow-delay=".6s" style="background: #8a2174 !important;margin-top:30px">En savoir +</a>
+                                <a id="details" href="{{ path('apropos') }}" class="btn btn-line-black btn-fx pull-right wow fadeIn" data-wow-delay=".6s" style="background: #8a2174 !important;margin-top:30px">En savoir +</a>
 
                             </div>
 
@@ -173,14 +173,14 @@
 
                         <div class="col-md-6 text-light" style="background-color: #631c61 !important">
 
-                            <div class="padding60">
+                            <div class="padding35">
 
                                     <h2 style="color:white !important">Nos Compétences<span class="tiny-border" style="background-color: rgb(168, 191, 41);color:black"></span></h2>
 
                                     <div class="skill-bar">
                                         <h3 style="color:white !important">Conseil général</h3>
                                         <div class="de-progress">
-                                            <div class="progress-bar" data-value="80%" style="background-color: rgb(168, 191, 41);color:white">
+                                            <div class="progress-bar" data-value="92%" style="background-color: rgb(168, 191, 41);color:white">
                                             </div>
                                         </div>
                                     </div>
@@ -190,7 +190,7 @@
                                     <div class="skill-bar">
                                         <h3 style="color:white !important">Gestion de la construction</h3>
                                         <div class="de-progress">
-                                            <div class="progress-bar" data-value="70%" style="background-color: rgb(168, 191, 41);color:white">
+                                            <div class="progress-bar" data-value="99%" style="background-color: rgb(168, 191, 41);color:white">
                                             </div>
                                         </div>
                                     </div>
@@ -200,7 +200,7 @@
                                     <div class="skill-bar">
                                         <h3 style="color:white !important">Conception &amp; Design</h3>
                                         <div class="de-progress">
-                                            <div class="progress-bar" data-value="90%" style="background-color: rgb(168, 191, 41);color:white">
+                                            <div class="progress-bar" data-value="95%" style="background-color: rgb(168, 191, 41);color:white">
                                             </div>
                                         </div>
                                     </div>
@@ -211,7 +211,7 @@
                                     <div class="skill-bar">
                                         <h3 style="color:white !important">Informatique & Télécom</h3>
                                         <div class="de-progress">
-                                            <div class="progress-bar" data-value="60%" style="background-color: rgb(168, 191, 41);">
+                                            <div class="progress-bar" data-value="89%" style="background-color: rgb(168, 191, 41);">
                                             </div>
                                         </div>
                                     </div>
@@ -222,7 +222,7 @@
                                     <div class="skill-bar">
                                         <h3 style="color:white !important">Réseau & Maintenance</h3>
                                         <div class="de-progress">
-                                            <div class="progress-bar" data-value="80%" style="background-color: rgb(168, 191, 41);">
+                                            <div class="progress-bar" data-value="85%" style="background-color: rgb(168, 191, 41);">
                                             </div>
                                         </div>
                                     </div>
@@ -239,9 +239,12 @@
                 <div class="container-fluid">
                     <div class="row-fluid table" style="background-size: cover;">
 
-                        <div class="col-md-6 text-light bg-black-60" data-bgcolor="#2b2b2b" style="background-color: rgb(43, 43, 43); background-size: cover;">
+                        <div class="col-md-6" data-bgimage="url({{ asset('bundles/images/background/bg-10.jpg') }})" style="background: url({{ asset('bundles/images/background/bg-10.jpg') }}) cover;">
+                        </div>
 
-                            <div class="padding60">
+                        <div class="col-md-6 text-black bg-light-60" data-bgcolor="#fffff" style="background-color: white;">
+
+                            <div class="padding35">
 
                                 <h2>Notre Histoire<span class="tiny-border" style="background-color: #981b70;"></span></h2>
 
@@ -309,8 +312,6 @@
 
                         </div>
 
-                        <div class="col-md-6" data-bgimage="url({{ asset('bundles/images/background/bg-10.jpg') }})" style="background: url({{ asset('bundles/images/background/bg-10.jpg') }}) cover;">
-                        </div>
 
                     </div>
 
@@ -374,8 +375,7 @@
                                 <h2 style="color: #981b70;">Planifier
                                     <span class="tiny-border" style="background-color: #981b70;"></span>
                                 </h2>
-                                For the successful execution of a project, effective planning is essential. Those involved with the design and execution
-                                of the infrastructure in question must consider zoning requirements.
+                                Planifions ensemble les différentes étapes de l'évolution du projet afin qu'il cadre à vos exigences.
                             </div>
                         </div>
 
@@ -393,8 +393,7 @@
                                 <h2 style="color: #981b70;">Imaginer
                                     <span class="tiny-border" style="background-color: #981b70;"></span>
                                 </h2>
-                                For the successful execution of a project, effective planning is essential. Those involved with the design and execution
-                                of the infrastructure in question must consider zoning requirements.
+                                Imaginez, rêvez d'infrastructure modernisées et nous vous accompagnerons dans leur réalisations.
                             </div>
                         </div>
 
@@ -408,8 +407,9 @@
                                 <h2 style="color: #981b70;">Bâtir
                                     <span class="tiny-border" style="background-color: #981b70;"></span>
                                 </h2>
-                                For the successful execution of a project, effective planning is essential. Those involved with the design and execution
-                                of the infrastructure in question must consider zoning requirements.
+                                {# For the successful execution of a project, effective planning is essential. Those involved with the design and execution
+                                of the infrastructure in question must consider zoning requirements. #}
+                                Bâtissons ensemble des projets d'infrastructure de qualité à la hauteur de vos espérances.
                             </div>
                         </div>
 
@@ -420,13 +420,13 @@
             <!-- section close -->
 
             <!-- section begin -->
-        <section id="section-steps-2" class="no-top no-bottom text-light" data-bgimage="url({{ asset('bundles/images/background/bg-14.jpg') }})" data-stellar-background-ratio=".2">
+        <section id="section-steps-2" class="no-top no-bottom text-light" data-bgimage="url({{ asset('bundles/images/bg-light-2.jpg') }})" data-stellar-background-ratio=".2">
             <div class="color-overlay pt80 pb80">
 			<div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="wow fadeInUp">Methodologie de Travail
-                            <span class="tiny-border"></span>
+                        <h2 class="wow fadeInUp" style="color: #f9f9f9 !important;">Methodologie de Travail
+                            <span class="tiny-border" style="background-color: #f9f9f9 !important;"></span>
                         </h2>
                     </div>
 
@@ -486,7 +486,7 @@
                         </div>
 
                         <div class="col-md-4 text-right">
-                            <a href="contact.html" class="btn btn-line-black btn-fx wow fadeIn">Demander un devis</a>
+                            <a href="" class="btn btn-line-black btn-fx wow fadeIn">Demander un devis</a>
                         </div>
                     </div>
                 </div>
